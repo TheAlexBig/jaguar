@@ -40,3 +40,6 @@ services:
       CUSTOM_HOST: db
     ports:
       - '${BACKEND_PORT}:${BACKEND_PORT}'
+volumes:
+  mysql_data:
+    driver: local
