@@ -17,6 +17,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 3
+    volumes:
+      - mysql_data:/var/lib/mysql
   back-end:
     build:
       context: ./archivos-rojos
