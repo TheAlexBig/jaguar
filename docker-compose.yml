@@ -19,7 +19,7 @@ services:
       retries: 3
   back-end:
     build:
-      context: ./archivos-rojos
+      context: ../archivos-rojos
       dockerfile: Dockerfile
     depends_on:
       db:
