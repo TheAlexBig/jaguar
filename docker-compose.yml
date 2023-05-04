@@ -44,6 +44,8 @@ services:
     build:
       context: ./cabezas-de-jaguar
       dockerfile: Dockerfile
+      args:
+        FRONTEND_PORT: ${FRONTEND_PORT}
     depends_on:
       - back-end
     environment:
