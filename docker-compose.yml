@@ -40,6 +40,16 @@ services:
       CUSTOM_HOST: db
     ports:
       - '${BACKEND_PORT}:${BACKEND_PORT}'
+  front-end:
+    build:
+      context: ./cabezas-de-jaguar
+      dockerfile: Dockerfile
+    depends_on:
+      - back-end
+    environment:
+      - FRONTEND_PORT: ${FRONTEND_PORT}
+    ports:
+      - '${FRONTEND_PORT}:${FRONTEND_PORT}'
 volumes:
   mysql_data:
     driver: local

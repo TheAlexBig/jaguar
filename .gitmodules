@@ -1,3 +1,6 @@
 [submodule "archivos-rojos"]
 	path = archivos-rojos
 	url = https://github.com/TheAlexBig/archivos-rojos.git
+[submodule "cabezas-de-jaguar"]
+	path = cabezas-de-jaguar
+	url = https://github.com/valencia12/cabezas-de-jaguar.git
