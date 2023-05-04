@@ -47,7 +47,7 @@ services:
     depends_on:
       - back-end
     environment:
-      - FRONTEND_PORT: '${FRONTEND_PORT}'
+      FRONTEND_PORT: ${FRONTEND_PORT}
     ports:
       - '${FRONTEND_PORT}:${FRONTEND_PORT}'
 volumes:
