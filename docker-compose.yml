@@ -65,7 +65,6 @@ services:
       - front-end
       - back-end
     restart: always
-    entrypoint: sh -c 'chmod +x /scripts/docker-entrypoint.sh && /scripts/docker-entrypoint.sh'
 
 volumes:
   mysql_data:
