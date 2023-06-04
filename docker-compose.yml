@@ -61,6 +61,7 @@ services:
       FRONTEND_PORT: ${FRONTEND_PORT}
     volumes:
       - ./nginx-proxy/nginx.conf.template:/etc/nginx/nginx.conf.template
+      - ./nginx-proxy/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx-proxy/sites:/etc/nginx/sites-available
       - ./nginx-proxy/sites-enabled:/etc/nginx/sites-enabled
       - ./scripts/docker-entrypoint.sh:/docker-entrypoint.sh
