@@ -53,14 +53,14 @@ services:
     ports:
       - '${FRONTEND_PORT}:${FRONTEND_PORT}'
 
-    nginx:
-      image: nginx
-      container_name: nginx
-      ports:
-        - 80:80
-      volumes:
-        - ./nginx-proxy:/etc/nginx
-      restart: always
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx-proxy:/etc/nginx
+    restart: always
 
 volumes:
   mysql_data:
