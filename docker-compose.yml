@@ -65,6 +65,7 @@ services:
       - ./nginx-proxy/sites-enabled:/etc/nginx/sites-enabled
     depends_on:
       - front-end
+      - back-end
     restart: always
 
 volumes:
