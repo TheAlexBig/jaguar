@@ -60,8 +60,7 @@ services:
       BACKEND_PORT: ${BACKEND_PORT}
       FRONTEND_PORT: ${FRONTEND_PORT}
     volumes:
-    - ./nginx-proxy/nginx.conf.template:/etc/nginx/nginx.conf.template
-    - ./scripts:/scripts
+    - ./nginx-proxy/templates:/etc/nginx/templates
     depends_on:
       - front-end
       - back-end
