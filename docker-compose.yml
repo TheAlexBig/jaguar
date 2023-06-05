@@ -59,6 +59,8 @@ services:
     environment:
       BACKEND_PORT: ${BACKEND_PORT}
       FRONTEND_PORT: ${FRONTEND_PORT}
+      CUSTOM_HOST: ${CUSTOM_HOST}
+      BASE_HOST: ${BASE_HOST}
     volumes:
     - ./nginx-proxy/templates:/etc/nginx/templates
     depends_on:
