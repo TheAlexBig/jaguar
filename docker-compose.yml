@@ -38,6 +38,8 @@ services:
       MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DB_PORT: ${MYSQL_DB_PORT}
       CUSTOM_HOST: db
+      FRONTEND_PORT: ${FRONTEND_PORT}
+      FRONTEND_HOST: web-ui
     ports:
       - '${BACKEND_PORT}:${BACKEND_PORT}'
   web-ui:
@@ -46,8 +48,6 @@ services:
       dockerfile: Dockerfile
       args:
         FRONTEND_PORT: ${FRONTEND_PORT}
-    depends_on:
-      - red-file
     environment:
       FRONTEND_PORT: ${FRONTEND_PORT}
     ports:
