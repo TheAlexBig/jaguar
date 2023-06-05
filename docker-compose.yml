@@ -60,7 +60,7 @@ services:
       BACKEND_PORT: ${BACKEND_PORT}
       FRONTEND_PORT: ${FRONTEND_PORT}
     volumes:
-    - ./nginx-proxy/templates/default.conf:/etc/nginx/templates/default.conf.template
+    - ./nginx-proxy/templates/default.conf.template:/etc/nginx/templates/default.conf.template
     depends_on:
       - web-ui
       - red-file
