@@ -19,7 +19,7 @@ services:
       retries: 3
     volumes:
       - mysql_data:/var/lib/mysql
-  back-end:
+  red-file:
     build:
       context: ./archivos-rojos
       dockerfile: Dockerfile
@@ -40,14 +40,14 @@ services:
       CUSTOM_HOST: db
     ports:
       - '${BACKEND_PORT}:${BACKEND_PORT}'
-  front-end:
+  web-ui:
     build:
       context: ./cabezas-de-jaguar
       dockerfile: Dockerfile
       args:
         FRONTEND_PORT: ${FRONTEND_PORT}
     depends_on:
-      - back-end
+      - red-file
     environment:
       FRONTEND_PORT: ${FRONTEND_PORT}
     ports:
@@ -62,8 +62,8 @@ services:
     volumes:
     - ./nginx-proxy/templates:/etc/nginx/templates
     depends_on:
-      - front-end
-      - back-end
+      - web-ui
+      - red-file
     restart: always
 
 volumes:
