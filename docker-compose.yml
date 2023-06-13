@@ -39,6 +39,11 @@ services:
       MYSQL_DB_PORT: ${MYSQL_DB_PORT}
       CUSTOM_HOST: db
       FRONTEND_PORT: ${FRONTEND_PORT}
+      MAIL_HOST: ${MAIL_HOST}
+      MAIL_PORT: ${MAIL_PORT}
+      MAIL_SOURCE: ${MAIL_SOURCE}
+      MAIL_USER: ${MAIL_USER}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
       FRONTEND_HOST: web-ui
     ports:
       - '${BACKEND_PORT}:${BACKEND_PORT}'
