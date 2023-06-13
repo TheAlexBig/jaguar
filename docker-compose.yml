@@ -50,7 +50,6 @@ services:
         FRONTEND_PORT: ${FRONTEND_PORT}
     environment:
       FRONTEND_PORT: ${FRONTEND_PORT}
-      ENV NODE_VERSION: 20.2.0
     ports:
       - '${FRONTEND_PORT}:${FRONTEND_PORT}'
   nginx:
