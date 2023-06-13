@@ -47,6 +47,7 @@ services:
       FRONTEND_HOST: web-ui
     ports:
       - '${BACKEND_PORT}:${BACKEND_PORT}'
+      - '${MAIL_PORT}:${MAIL_PORT}'
   web-ui:
     build:
       context: ./cabezas-de-jaguar
