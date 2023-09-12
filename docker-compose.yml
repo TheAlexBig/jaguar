@@ -45,6 +45,8 @@ services:
       MAIL_USER: ${MAIL_USER}
       MAIL_PASSWORD: ${MAIL_PASSWORD}
       FRONTEND_HOST: web-ui
+      DEV_PORT: ${DEV_PORT}
+      PROFILE: ${PROFILE}
     ports:
       - '${BACKEND_PORT}:${BACKEND_PORT}'
       - '${MAIL_PORT}:${MAIL_PORT}'
