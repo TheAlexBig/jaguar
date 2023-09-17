@@ -58,6 +58,8 @@ services:
         FRONTEND_PORT: ${FRONTEND_PORT}
     environment:
       FRONTEND_PORT: ${FRONTEND_PORT}
+      REACT_APP_API_ENDPOINT: red-file/api
+      REACT_APP_HTTPS: http
     ports:
       - '${FRONTEND_PORT}:${FRONTEND_PORT}'
   nginx:
