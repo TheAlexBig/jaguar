@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Change to your Git repository directory
-cd /path/to/your/git/repository
-
 # Perform a Git pull
 git pull
 
