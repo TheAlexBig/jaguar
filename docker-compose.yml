@@ -55,13 +55,11 @@ services:
       context: ./cabezas-de-jaguar
       dockerfile: Dockerfile
       args:
-        FRONTEND_PORT: ${FRONTEND_PORT}
+        FRONTEND_PORT: ${FRONTEND_PORT
         REACT_APP_API_ENDPOINT: ${REACT_APP_API_ENDPOINT}
         REACT_APP_HTTPS: ${REACT_APP_HTTPS}
     environment:
       FRONTEND_PORT: ${FRONTEND_PORT}
-      REACT_APP_API_ENDPOINT: ${REACT_APP_API_ENDPOINT}
-      REACT_APP_HTTPS: ${REACT_APP_HTTPS}
     ports:
       - '${FRONTEND_PORT}:${FRONTEND_PORT}'
   nginx:
