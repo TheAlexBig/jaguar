@@ -56,8 +56,8 @@ services:
       dockerfile: Dockerfile
     environment:
       - FRONTEND_PORT=${FRONTEND_PORT}
-      - REACT_APP_API_URL=${REACT_APP_API_URL}
-      - REACT_APP_API_KEY=${REACT_APP_API_KEY}
+      - REACT_APP_HTTPS=${REACT_APP_HTTPS}
+      - REACT_APP_HOST_IP_ADDRESS=${REACT_APP_HOST_IP_ADDRESS}
     ports:
       - '${FRONTEND_PORT}:${FRONTEND_PORT}'
   nginx:
