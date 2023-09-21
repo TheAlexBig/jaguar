@@ -18,11 +18,11 @@ sudo docker system prune -f
 
 # Step 5: Remove all stopped containers 
 echo "Step 5: Removing all stopped containers"
-sudo docker rm $(docker ps -aq)
+sudo docker rm $(sudo docker ps -aq)
 
 # Step 6: Remove all Docker images
 echo "Step 6: Removing all Docker images"
-sudo docker rmi -f $(docker images -q)
+sudo docker rmi -f $(sudo docker images -q)
 
 # Step 7: Start Docker Compose with cleanup and build
 echo "Step 7: Starting Docker Compose with cleanup and build"
