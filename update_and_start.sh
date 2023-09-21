@@ -1,16 +1,24 @@
 #!/bin/bash
 
-# Perform a Git pull
+# Step 1: Perform a Git pull
+echo "Step 1: Performing a Git pull"
 git pull
 
-# Update Git submodules
+# Step 2: Update Git submodules
+echo "Step 2: Updating Git submodules"
 git submodule update --remote --merge
 
-# Stop Docker Compose services
+# Step 3: Stop Docker Compose services
+echo "Step 3: Stopping Docker Compose services"
 sudo docker-compose stop
 
-# Clean up Docker resources
+# Step 4: Clean up Docker resources
+echo "Step 4: Cleaning up Docker resources"
 sudo docker system prune -f
 
-# Start Docker Compose with cleanup and build
+# Step 5: Start Docker Compose with cleanup and build
+echo "Step 5: Starting Docker Compose with cleanup and build"
 sudo docker-compose up --remove-orphans --build
+
+# Done
+echo "Script completed"
