@@ -53,7 +53,7 @@ services:
   web-ui:
     build:
       context: ./cabezas-de-jaguar
-      dockerfile: Dockerfil
+      dockerfile: Dockerfile
       args:
         - FRONTEND_PORT=${FRONTEND_PORT}
         - REACT_APP_HTTPS=${REACT_APP_HTTPS}
