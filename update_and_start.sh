@@ -16,8 +16,16 @@ sudo docker-compose stop
 echo "Step 4: Cleaning up Docker resources"
 sudo docker system prune -f
 
-# Step 5: Start Docker Compose with cleanup and build
-echo "Step 5: Starting Docker Compose with cleanup and build"
+# Step 5: Remove all stopped containers 
+echo "Step 5: Removing all stopped containers"
+docker rm $(docker ps -aq)
+
+# Step 6: Remove all Docker images
+echo "Step 6: Removing all Docker images"
+docker rmi -f $(docker images -q)
+
+# Step 7: Start Docker Compose with cleanup and build
+echo "Step 7: Starting Docker Compose with cleanup and build"
 sudo docker-compose up --remove-orphans --build
 
 # Done
