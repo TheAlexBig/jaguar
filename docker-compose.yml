@@ -23,7 +23,6 @@ services:
     build:
       context: ./archivos-rojos
       dockerfile: Dockerfile
-      timeout: 600
     depends_on:
       db:
         condition: service_healthy
@@ -54,8 +53,7 @@ services:
   web-ui:
     build:
       context: ./cabezas-de-jaguar
-      dockerfile: Dockerfile
-      timeout: 600
+      dockerfile: Dockerfil
       args:
         - FRONTEND_PORT=${FRONTEND_PORT}
         - REACT_APP_HTTPS=${REACT_APP_HTTPS}
