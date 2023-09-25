@@ -59,9 +59,7 @@ services:
       - REACT_APP_HTTPS=${REACT_APP_HTTPS}
       - REACT_APP_API_ENDPOINT=${REACT_APP_API_ENDPOINT}
     volumes:
-      - type: bind
-        source: .env 
-        target: /app/.env
+      - ./.env:/app/.env
     ports:
       - '${FRONTEND_PORT}:${FRONTEND_PORT}'
   nginx:
