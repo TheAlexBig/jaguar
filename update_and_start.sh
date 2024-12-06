@@ -6,7 +6,8 @@ git pull
 
 # Step 2: Update Git submodules
 echo "Step 2: Updating Git submodules"
-git submodule update --remote --merge
+git submodule update --init --recursive
+git submodule foreach 'git checkout main && git pull origin main'
 
 # Step 3: Stop Docker Compose services
 echo "Step 3: Stopping Docker Compose services"
@@ -18,7 +19,7 @@ sudo docker system prune -f
 
 # Step 5: Start Docker Compose with cleanup and build
 echo "Step 5: Starting Docker Compose with cleanup and build"
-sudo docker-compose up --remove-orphans --build
+sudo docker-compose up -d --remove-orphans --build
 
 # Done
 echo "Script completed"
